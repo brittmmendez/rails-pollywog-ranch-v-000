@@ -5,7 +5,6 @@ class TadpolesController < ApplicationController
     #makes a new frog with the tadpole's name, color, and pond
     @frog = Frog.create(name: @tadpole.name, color: @tadpole.color,  pond_id: @tadpole.frog.pond_id)
     #deletes the tadpole from the database
-    set_tadpole
     @tadpole.delete
     #redirects to the newly made frog's show page
     redirect_to frog_path(@frog)
