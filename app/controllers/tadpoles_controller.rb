@@ -4,7 +4,7 @@ class TadpolesController < ApplicationController
   def metamorphose
     binding.pry
     #makes a new frog with the tadpole's name, color, and pond
-    @frog = Frog.create(name: "#{@tadpole.name}", color: "#{@tadpole.color}",  pond: @tadpole.pond_id)
+    @frog = Frog.create(name: @tadpole.name, color: @tadpole.color,  pond: @tadpole.frog.pond_id)
     #deletes the tadpole from the database
     set_tadpole
     @tadpole.delete
