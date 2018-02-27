@@ -5,7 +5,6 @@ class CreateFrogs < ActiveRecord::Migration
         t.string :color
         t.integer :pond_id
 
-        t.timestamps null: false
       end
     end
 end
